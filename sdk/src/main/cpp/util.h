@@ -17,11 +17,14 @@
 #ifndef HELLO_CARDBOARD_ANDROID_SRC_MAIN_JNI_UTIL_H_
 #define HELLO_CARDBOARD_ANDROID_SRC_MAIN_JNI_UTIL_H_
 
-#include "../../../../../../../Android/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/android/asset_manager.h"
-#include "../../../../../../../Android/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/jni.h"
+#define NDK_PATH "/Users/stary/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/"
+#define FILE_PATH(dir, file) file
 
-#include "../../../../../../../Android/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/c++/v1/array"
-#include "../../../../../../../Android/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/c++/v1/vector"
+#include FILE_PATH(NDK_PATH,"android/asset_manager.h")
+#include FILE_PATH(NDK_PATH,"jni.h")
+
+#include FILE_PATH(NDK_PATH,"c++/v1/array")
+#include FILE_PATH(NDK_PATH,"c++/v1/vector")
 
 #define LOG_TAG "HelloCardboardApp"
 #define LOGW(...) __android_log_print(ANDROID_LOG_WARN, LOG_TAG, __VA_ARGS__)
